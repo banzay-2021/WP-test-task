@@ -7,6 +7,8 @@
       <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/twentytwentytwo" />
       <excludeFolder url="file://$MODULE_DIR$/wp-admin" />
       <excludeFolder url="file://$MODULE_DIR$/wp-includes" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/codeStyles" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
