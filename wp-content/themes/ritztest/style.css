@@ -8,105 +8,110 @@ Requires PHP: 5.2.4
 Description:
 Author: Leonid Melenchuk
 */
-
-.blog-header {
-    line-height: 1;
-    border-bottom: 1px solid #e5e5e5;
+@charset "UTF-8";
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+    line-height: 18px;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
 }
 
-.blog-header-logo {
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
-    font-size: 2.25rem;
+.body {
+    font-family: 'Gotham Pro';
+    font-size: 14px;
+    font-weight: 400;
 }
 
-.blog-header-logo:hover {
-    text-decoration: none;
+.home-categories {
+    margin-top: -68px;
 }
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+.home-categories-col {
+    width: 592px;
+    height: 320px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative;
 }
-
-.display-4 {
-    font-size: 2.5rem;
-}
-@media (min-width: 768px) {
-    .display-4 {
-        font-size: 3rem;
+@media screen and (max-width: 768px) {
+    .home-categories-col {
+        width: 100%;
     }
 }
-
-.nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 2.75rem;
-    overflow-y: hidden;
+.home-categories-title {
+    font-family: 'Gotham Pro';
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    color: #FFFFFF;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+}
+a.home-categories-link {
+    color: #FFFFFF !important;
+    position: absolute;
+    left: 40px;
+    top: 80px;
+    opacity: 0.5;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.nav-scroller .nav {
-    display: flex;
-    flex-wrap: nowrap;
-    padding-bottom: 1rem;
-    margin-top: -1px;
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
+.icon::before {
+    margin-left: 5px;
+    position: absolute;
+    font-size: 17px;
+}
+.icon-chevron-righ::before  {
+    content: ">";
 }
 
-.nav-scroller .nav-link {
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    font-size: .875rem;
+.home-top-categories-title {
+    font-size: 30px;
+    line-height: 36px;
+    font-family: 'Gotham Pro';
+    font-weight: 900;
 }
 
-.card-img-right {
-    height: 100%;
-    border-radius: 0 3px 3px 0;
+.container.position-absolute {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.mt-5.home-about-as {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: calc(100vw / 1.78);
+}
+.home-about-as-title {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 36px;
+}
+.mark-bg {
+    display: inline-block;
+    padding: 5px 15px 5px 10px;
+    color: white;
+    margin-bottom: 0 !important;
+    clip-path: polygon(7px 0, 100% 0, 93% 100%, 0 100%);
+    -webkit-clip-path: polygon(7px 0, 100% 0, 93% 100%, 0 100%);
+}
+.home-about-as-mark {
+    text-transform: uppercase;
+    font-style: italic;
+}
+.home-about-as-btn {
+    margin-top: 0 !important;
 }
 
-.flex-auto {
-    flex: 0 0 auto;
-}
-
-.h-250 { height: 250px; }
-@media (min-width: 768px) {
-    .h-md-250 { height: 250px; }
-}
-
-/* Pagination */
-.blog-pagination {
-    margin-bottom: 4rem;
-}
-.blog-pagination > .btn {
-    border-radius: 2rem;
-}
-
-/*
- * Blog posts
- */
-.blog-post {
-    margin-bottom: 4rem;
-}
-.blog-post-title {
-    margin-bottom: .25rem;
-    font-size: 2.5rem;
-}
-.blog-post-meta {
-    margin-bottom: 1.25rem;
-    color: #727272;
-}
-
-/*
- * Footer
- */
-.blog-footer {
-    padding: 2.5rem 0;
-    color: #727272;
-    text-align: center;
-    background-color: #f9f9f9;
-    border-top: .05rem solid #e5e5e5;
-}
-.blog-footer p:last-child {
-    margin-bottom: 0;
+.home-favourites-col {
+    width: 280px;
+    height: 352px;
 }
