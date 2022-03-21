@@ -113,7 +113,7 @@ function ritz_theme_support() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Twenty Twenty, use a find and replace
+	 * If you're building a theme based on Ritz, use a find and replace
 	 * to change 'ritz' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'ritz' );
@@ -185,7 +185,7 @@ require get_template_directory() . '/inc/block-patterns.php';
 /**
  * Register and Enqueue Styles.
  *
- * @since Twenty Twenty 1.0
+ * @since Ritz 1.0
  */
 function ritz_register_styles() {
 
@@ -207,7 +207,7 @@ add_action( 'wp_enqueue_scripts', 'ritz_register_styles' );
 /**
  * Register and Enqueue Scripts.
  *
- * @since Twenty Twenty 1.0
+ * @since Ritz 1.0
  */
 function ritz_register_scripts() {
 
@@ -230,7 +230,7 @@ add_action( 'wp_enqueue_scripts', 'ritz_register_scripts' );
  * This does not enqueue the script because it is tiny and because it is only for IE11,
  * thus it does not warrant having an entire dedicated blocking script being loaded.
  *
- * @since Twenty Twenty 1.0
+ * @since Ritz 1.0
  *
  * @link https://git.io/vWdr2
  */
@@ -247,7 +247,7 @@ add_action( 'wp_print_footer_scripts', 'ritz_skip_link_focus_fix' );
 /**
  * Enqueue non-latin language styles.
  *
- * @since Twenty Twenty 1.0
+ * @since Ritz 1.0
  *
  * @return void
  */
@@ -264,7 +264,7 @@ add_action( 'wp_enqueue_scripts', 'ritz_non_latin_languages' );
 /**
  * Register navigation menus uses wp_nav_menu in five places.
  *
- * @since Twenty Twenty 1.0
+ * @since Ritz 1.0
  */
 function ritz_menus() {
 
@@ -284,7 +284,7 @@ add_action( 'init', 'ritz_menus' );
 /**
  * Get the information about the logo.
  *
- * @since Twenty Twenty 1.0
+ * @since Ritz 1.0
  *
  * @param string $html The HTML output from get_custom_logo (core function).
  * @return string
@@ -344,7 +344,7 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 	/**
 	 * Shim for wp_body_open, ensuring backward compatibility with versions of WordPress older than 5.2.
 	 *
-	 * @since Twenty Twenty 1.0
+	 * @since Ritz 1.0
 	 */
 	function wp_body_open() {
 		/** This action is documented in wp-includes/general-template.php */
@@ -355,7 +355,7 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 /**
  * Include a skip to content link at the top of the page so that users can bypass the menu.
  *
- * @since Twenty Twenty 1.0
+ * @since Ritz 1.0
  */
 function ritz_skip_link() {
 	echo '<a class="skip-link screen-reader-text" href="#site-content">' . __( 'Skip to the content', 'ritz' ) . '</a>';
@@ -366,7 +366,7 @@ add_action( 'wp_body_open', 'ritz_skip_link', 5 );
 /**
  * Register widget areas.
  *
- * @since Twenty Twenty 1.0
+ * @since Ritz 1.0
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
@@ -404,6 +404,29 @@ function ritz_sidebar_registration() {
 		)
 	);
 
+	// Footer #3.
+	register_sidebar(
+		array_merge(
+			$shared_args,
+			array(
+				'name'        => __( 'Footer #3', 'ritz' ),
+				'id'          => 'sidebar-3',
+				'description' => __( 'Widgets in this area will be displayed in the second column in the footer.', 'ritz' ),
+			)
+		)
+	);
+
+    // Footer #4.
+	register_sidebar(
+		array_merge(
+			$shared_args,
+			array(
+				'name'        => __( 'Footer #4', 'ritz' ),
+				'id'          => 'sidebar-',
+				'description' => __( 'Widgets in this area will be displayed in the second column in the footer.', 'ritz' ),
+			)
+		)
+	);
 }
 
 add_action( 'widgets_init', 'ritz_sidebar_registration' );
@@ -411,7 +434,7 @@ add_action( 'widgets_init', 'ritz_sidebar_registration' );
 /**
  * Enqueue supplemental block editor styles.
  *
- * @since Twenty Twenty 1.0
+ * @since Ritz 1.0
  */
 function ritz_block_editor_styles() {
 
@@ -434,7 +457,7 @@ add_action( 'enqueue_block_editor_assets', 'ritz_block_editor_styles', 1, 1 );
 /**
  * Enqueue classic editor styles.
  *
- * @since Twenty Twenty 1.0
+ * @since Ritz 1.0
  */
 function ritz_classic_editor_styles() {
 
@@ -452,7 +475,7 @@ add_action( 'init', 'ritz_classic_editor_styles' );
  * Output Customizer settings in the classic editor.
  * Adds styles to the head of the TinyMCE iframe. Kudos to @Otto42 for the original solution.
  *
- * @since Twenty Twenty 1.0
+ * @since Ritz 1.0
  *
  * @param array $mce_init TinyMCE styles.
  * @return array TinyMCE styles.
@@ -505,7 +528,7 @@ add_filter( 'tiny_mce_before_init', 'ritz_add_classic_editor_non_latin_styles' )
  * Block Editor Settings.
  * Add custom colors and font sizes to the block editor.
  *
- * @since Twenty Twenty 1.0
+ * @since Ritz 1.0
  */
 function ritz_block_editor_settings() {
 
@@ -608,7 +631,7 @@ add_filter( 'the_content_more_link', 'ritz_read_more_tag' );
 /**
  * Enqueues scripts for customizer controls & settings.
  *
- * @since Twenty Twenty 1.0
+ * @since Ritz 1.0
  *
  * @return void
  */
@@ -631,7 +654,7 @@ add_action( 'customize_controls_enqueue_scripts', 'ritz_customize_controls_enque
 /**
  * Enqueue scripts for the customizer preview.
  *
- * @since Twenty Twenty 1.0
+ * @since Ritz 1.0
  *
  * @return void
  */
@@ -657,7 +680,7 @@ add_action( 'customize_preview_init', 'ritz_customize_preview_init' );
 /**
  * Get accessible color for an area.
  *
- * @since Twenty Twenty 1.0
+ * @since Ritz 1.0
  *
  * @param string $area    The area we want to get the colors for.
  * @param string $context Can be 'text' or 'accent'.
@@ -696,7 +719,7 @@ function ritz_get_color_for_area( $area = 'content', $context = 'text' ) {
 /**
  * Returns an array of variables for the customizer preview.
  *
- * @since Twenty Twenty 1.0
+ * @since Ritz 1.0
  *
  * @return array
  */
@@ -715,7 +738,7 @@ function ritz_get_customizer_color_vars() {
 /**
  * Get an array of elements.
  *
- * @since Twenty Twenty 1.0
+ * @since Ritz 1.0
  *
  * @return array
  */
@@ -777,9 +800,9 @@ function ritz_get_elements_array() {
 	);
 
 	/**
-	 * Filters Twenty Twenty theme elements.
+	 * Filters Ritz theme elements.
 	 *
-	 * @since Twenty Twenty 1.0
+	 * @since Ritz 1.0
 	 *
 	 * @param array Array of elements.
 	 */

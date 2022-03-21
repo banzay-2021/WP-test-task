@@ -1,25 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html <?php language_attributes(); ?> class="no-js">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-	<meta name="author" content="Leonid Melenchuk">
-	<title>Ritz</title>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <meta name="author" content="Leonid Melenchuk">
+    <title>Ritz</title>
 
-	<!-- CSS only -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- CSS only -->
 
-	<!-- Custom styles for this template -->
-	<link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
-	<!-- Custom styles for this template -->
-	<link href="blog.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
 
-    <?php
-        wp_head();
-    ?>
-</head>
-<body>
+    <!-- Custom styles for this template -->
+
+	<?php
+	/*
+	 *  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link href="<?=get_template_directory_uri();?>/assets/bootstrap.min.css" rel="stylesheet">
+	<link href="wp-content/themes/ritztest/assets/css/bootstrap.css" rel="stylesheet">
+	<link href="wp-content/themes/ritztest/assets/css/stylesheet.css" rel="stylesheet">
+	<link href="wp-content/themes/ritztest/style.css" rel="stylesheet">
 
 <div class="container">
 	<header class="blog-header py-3">
@@ -55,4 +56,15 @@
 			<a class="p-2 link-secondary" href="#">Travel</a>
 		</nav>
 	</div>
+</div>
+
+	*/
+	?>
+	<?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
+<div class="header">
+    <div class="wp-custom-header">
+        <img src="/wp-content/uploads/2022/03/Homepage-Video.png" alt="" sizes="100vw" width="1920" height="960">
+    </div>
 </div>
