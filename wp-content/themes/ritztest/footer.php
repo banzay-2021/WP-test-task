@@ -22,7 +22,7 @@ $arrFooterMenus = [
 <footer class="bg-col pt-5 mt-5 color-text-ritz">
     <div class="container pt-5">
         <div class="row my-5">
-            <div class="col-12 col-lg-4 ps-4 mb-4">
+            <div class="col-12 col-lg-4 ps-4 mb-4 inline">
                 <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
                     <img class="logo" width="98" height="48"
                          src="<?= get_template_directory_uri(); ?>/assets/images/Ritz_Logo_Dark.svg">
@@ -42,7 +42,6 @@ $arrFooterMenus = [
 									'items_wrap'     => '%3$s',
 									'theme_location' => $item['theme_location'],
 									'walker'         => new FooterWalkerNavMenu(),
-									'class_link'     => 'nav-link p-0 text-muted',
 								)
 							);
 							?>

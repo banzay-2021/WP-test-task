@@ -63,8 +63,61 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div class="header">
-    <div class="wp-custom-header">
+<?php
+    $hasFooterShop = has_nav_menu( 'footerShop' );
+?>
+<div class="header position-relative">
+    <div class="position-fixed py-4 w-100 zi-1">
+        <div class="container">
+            <div class="row">
+                <div class="d-flex align-items-center logo-top ps-4 ms-2">
+                    <a href="/" class="d-flex link-dark text-decoration-none">
+                        <img class="logo" width="98" height="48"
+                             src="<?= get_template_directory_uri(); ?>/assets/images/Ritz_Logo_Light.svg">
+                    </a>
+                </div>
+
+                <nav class="d-flex align-items-center col-6 col-lg-6 navbar-expand-lg navbar-header">
+
+                    <?php if ( $hasFooterShop ) { ?>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+
+	                            <?php
+	                            wp_nav_menu(
+		                            array(
+			                            'container'      => '',
+			                            'depth'          => 2,
+			                            'items_wrap'     => '%3$s',
+			                            'theme_location' => 'footerShop',
+			                            'walker'         => new TopWalkerNavMenu(),
+		                            )
+	                            );
+	                            ?>
+                            </ul>
+                        </div>
+                    <?php } ?>
+                </nav>
+
+                <div class="d-flex align-items-center col-4 col-lg-4 ps-4">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wp-custom-header position-relative">
+        <div class="position-absolute header-text-body">
+            <div class="header-text-mark">
+                LET THE ADVENTURE BEGIN
+            </div>
+            <div class="">
+                Malta's Largest dedicated Kayak and SUP store
+            </div>
+        </div>
         <img src="/wp-content/uploads/2022/03/Homepage-Video.png" alt="" sizes="100vw" width="1920" height="960">
     </div>
 </div>
