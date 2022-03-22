@@ -23,16 +23,16 @@ $arrItems = [
 <div class="container home-categories">
     <div class="row">
 		<?php
-		for ( $i = 0; $i < count( $arrItems ); $i ++ ) {
+		foreach ($arrItems as $item) {
 			?>
             <div class="col-12 col-lg">
                 <div class="mb-5 home-categories-col"
-                     style="background-image: url(<?php echo $arrItems[ $i ]['pic']; ?>)">
+                     style="background-image: url(<?= $item['pic']; ?>)">
                     <div class="home-categories-title">
-						<?php echo $arrItems[ $i ]['title']; ?>
+						<?= $item['title']; ?>
                     </div>
                     <a class="home-categories-link">
-                        Shop <?php echo $arrItems[ $i ]['title']; ?> <span class="icon icon-chevron-righ"></span>
+                        Shop <?= $item['title']; ?> <span class="icon icon-chevron-righ"></span>
                     </a>
                 </div>
             </div>
