@@ -68,13 +68,30 @@ a.home-categories-link {
     cursor: pointer;
 }
 
-.icon::before {
-    margin-left: 5px;
-    position: absolute;
-    font-size: 17px;
+.icon-chevron {
+    border: solid;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 0px 0 1px 2px;
 }
-.icon-chevron-righ::before  {
-    content: ">";
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 
 .home-top-categories-title {

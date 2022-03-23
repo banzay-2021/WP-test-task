@@ -32,7 +32,7 @@ $arrItems = [
 						<?= $item['title']; ?>
                     </div>
                     <a class="home-categories-link">
-                        Shop <?= $item['title']; ?> <span class="icon icon-chevron-righ"></span>
+                        Shop <?= $item['title']; ?> <span class="icon-chevron right"></span>
                     </a>
                 </div>
             </div>
@@ -81,7 +81,7 @@ $arrItems = [
                     Kayaks
                 </div>
                 <a class="home-favourites-link">
-                    Shop Kayaks <span class="icon icon-chevron-righ"></span>
+                    Shop Kayaks <span class="icon-chevron right"></span>
                 </a>
             </div>
         </div>
@@ -91,7 +91,7 @@ $arrItems = [
                     Kayaks
                 </div>
                 <a class="home-favourites-link">
-                    Shop Kayaks <span class="icon icon-chevron-righ"></span>
+                    Shop Kayaks <span class="icon-chevron right"></span>
                 </a>
             </div>
         </div>
@@ -101,7 +101,7 @@ $arrItems = [
                     Kayaks
                 </div>
                 <a class="home-favourites-link">
-                    Shop Kayaks <span class="icon icon-chevron-righ"></span>
+                    Shop Kayaks <span class="icon-chevron right"></span>
                 </a>
             </div>
         </div>
@@ -111,7 +111,7 @@ $arrItems = [
                     Kayaks
                 </div>
                 <a class="home-favourites-link">
-                    Shop Kayaks <span class="icon icon-chevron-righ"></span>
+                    Shop Kayaks <span class="icon-chevron right"></span>
                 </a>
             </div>
         </div>
@@ -134,7 +134,7 @@ $arrItems = [
                         Kayaks
                     </div>
                     <a class="home-updated-link">
-                        Shop Kayaks <span class="icon icon-chevron-righ"></span>
+                        Shop Kayaks <span class="icon-chevron right"></span>
                     </a>
                 </div>
             </div>
@@ -144,7 +144,7 @@ $arrItems = [
                         Kayaks
                     </div>
                     <a class="home-updated-link">
-                        Shop Kayaks <span class="icon icon-chevron-righ"></span>
+                        Shop Kayaks <span class="icon-chevron right"></span>
                     </a>
                 </div>
             </div>
@@ -154,7 +154,7 @@ $arrItems = [
                         Kayaks
                     </div>
                     <a class="home-updated-link">
-                        Shop Kayaks <span class="icon icon-chevron-righ"></span>
+                        Shop Kayaks <span class="icon-chevron right"></span>
                     </a>
                 </div>
             </div>
