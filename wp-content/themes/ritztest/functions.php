@@ -107,6 +107,7 @@ add_action( 'init', 'ritz_menus' );
 
 function load_bootstrap() {
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.js' );
+	wp_enqueue_script( 'script-js', get_template_directory_uri() . '/assets/js/script.js' );
 
 
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.css' );

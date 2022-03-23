@@ -67,7 +67,7 @@
     $hasFooterShop = has_nav_menu( 'footerShop' );
 ?>
 <div class="header position-relative">
-    <div class="position-fixed py-4 w-100 zi-1">
+    <div id="top-menu" class="position-fixed py-4 w-100 zi-1">
         <div class="container">
             <div class="row">
                 <div class="d-flex align-items-center logo-top ps-4 ms-2">
