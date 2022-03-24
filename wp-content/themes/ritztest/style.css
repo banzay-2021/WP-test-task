@@ -305,6 +305,12 @@ footer h5 {
 .home-updated-title-cat.bg-blue {
     background: #57B9D0;
 }
+.home-updated-title-cat.bg-solid {
+    background: #F1B426;
+}
+.home-updated-title-cat.bg-black {
+    background: #1A1A1A;
+}
 .home-updated-data {
     display: inline-block;
     font-size: 12px;

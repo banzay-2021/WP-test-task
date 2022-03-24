@@ -146,6 +146,7 @@ if ( count( $categories ) > 0 ) {
 		if ( count( $posts ) > 0 ) {
 			$arrPostsTemp['empty'] = false;
 			foreach ( $posts as $post ) {
+				$arrPostsTemp['postId']    = $post->ID;
 				$arrPostsTemp['postName']    = $post->post_title;
 				$arrPostsTemp['postData']    = $post->post_date;
 				$arrPostsTemp['postLink']    = get_page_link( $post->ID );
@@ -179,7 +180,7 @@ if ( count( $categories ) > 0 ) {
                         <div class="col-lg-4 col-md-12">
                             <div class="m-4 home-updated-col">
                                 <div class="home-updated-pic" style="background-image: url('<?= $post['postPicLink']; ?>'">)"></div>
-                                <div class="home-updated-title-cat bg-red">
+                                <div class="home-updated-title-cat <?= get_post_meta($post['postId'], 'color_mark', true); ?>">
 	                                <?= $post['catName']; ?>
                                 </div>
                                 <div class="home-updated-data">

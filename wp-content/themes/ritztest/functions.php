@@ -117,3 +117,72 @@ function load_bootstrap() {
 }
 
 add_action( 'wp_enqueue_scripts', 'load_bootstrap' );
+
+if( function_exists('acf_add_local_field_group') ):
+
+	acf_add_local_field_group(array(
+		'key' => 'group_623ce778c1a22',
+		'title' => 'Color Mark',
+		'fields' => array(
+			array(
+				'key' => 'field_623ce8e31e79a',
+				'label' => 'Color Mark',
+				'name' => 'color_mark',
+				'type' => 'text',
+				'instructions' => 'Marker color for Post Category
+bg-red, bg-blue, bg-solid, bg-black',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => 10,
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'post_category',
+					'operator' => '==',
+					'value' => 'category:ritz',
+				),
+			),
+			array(
+				array(
+					'param' => 'post_category',
+					'operator' => '==',
+					'value' => 'category:kayaks',
+				),
+			),
+			array(
+				array(
+					'param' => 'post_category',
+					'operator' => '==',
+					'value' => 'category:marine',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => array(
+			0 => 'discussion',
+			1 => 'comments',
+			2 => 'slug',
+			3 => 'author',
+			4 => 'featured_image',
+		),
+		'active' => true,
+		'description' => '',
+		'show_in_rest' => 0,
+	));
+
+endif;
