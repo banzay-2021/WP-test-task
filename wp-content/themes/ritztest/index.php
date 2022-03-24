@@ -162,8 +162,11 @@ if ( count( $categories ) > 0 ) {
     <div class="bg-col py-5">
         <div class="container mt-5">
             <div class="row">
-                <div class="col-lg-6 m-3 home-top-categories-title">
+                <div class="col-6 col-sm my-3 home-top-categories-title">
                     Keep Updated
+                </div>
+                <div class="col-6 col-sm my-3 home-top-see-more">
+                    <a href="#" class="btn btn-dark home-see-more-btn">See More</a>
                 </div>
             </div>
         </div>
