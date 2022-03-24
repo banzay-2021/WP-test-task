@@ -67,10 +67,10 @@
     $hasFooterShop = has_nav_menu( 'footerShop' );
 ?>
 <div class="header position-relative">
-    <div id="top-menu" class="position-fixed py-4 w-100 zi-1">
+    <div id="top-menu" class="position-fixed py-2 py-md-4 w-100 zi-1">
         <div class="container">
             <div class="row">
-                <div class="d-flex align-items-center logo-top ps-4 ms-2">
+                <div class="d-flex align-items-center logo-top ps-md-4 ms-md-2">
                     <a href="/" class="d-flex link-dark text-decoration-none">
                         <img class="logo" width="98" height="48"
                              src="<?= get_template_directory_uri(); ?>/assets/images/Ritz_Logo_Light.svg">

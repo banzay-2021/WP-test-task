@@ -218,8 +218,45 @@ footer h5 {
     top: 28%;
     transform: translate(-50%, 0);
     text-align: center;
-    width: 31%;
+    width: 26%;
 }
+
+@media screen and (max-width: 1710px) {
+    .header-text-body {
+        width: 31%;
+    }
+}
+@media screen and (max-width: 1460px) {
+    .header-text-body {
+        width: 36%;
+    }
+}
+@media screen and (max-width: 1170px) {
+    .header-text-body {
+        width: 38%;
+    }
+}
+@media screen and (max-width: 970px) {
+    .header-text-body {
+        width: 46%;
+    }
+}
+@media screen and (max-width: 970px) {
+    .header-text-body {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 660px) {
+    .header-text-body {
+        width: 54%;
+    }
+}
+@media screen and (max-width: 590px) {
+    .header-text-body {
+        width: 95%;
+    }
+}
+
 .header-text-mark {
     background: #F14C26;
     clip-path: polygon(3% 0, 100% 0, 97% 100%, 0 100%);
@@ -230,4 +267,58 @@ footer h5 {
     line-height: 18px;
     padding: 5px 18px 5px 15px;
     margin-bottom: 10px;
+}
+
+.home-updated-col {
+    height: 368px;
+}
+@media screen and (max-width: 987px) {
+    .home-updated-col {
+        width: 384px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+.home-updated-pic {
+    max-width: 384px;
+    height: 256px;
+    background-size: cover;
+    background-position: center left;
+    margin-bottom: 10px;
+}
+.home-updated-title-cat {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 18px;
+    font-style: italic;
+    text-transform: uppercase;
+    clip-path: polygon(7% 0, 100% 0, 93% 100%, 0 100%);
+    color: #FFF;
+    padding: 3px 13px 3px 10px;
+}
+.home-updated-title-cat.bg-red {
+    background: #F14C26;
+}
+.home-updated-title-cat.bg-blue {
+    background: #57B9D0;
+}
+.home-updated-data {
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: middle;
+    line-height: 18px;
+    color: #1A1A1A;
+    opacity: 0.6;
+    margin-left: 8px;
+}
+.home-updated-title {
+    margin-top: 4px;
+}
+.home-updated-title a {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    text-decoration: none;
+    color: #1A1A1A;
 }
