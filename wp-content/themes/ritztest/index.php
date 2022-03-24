@@ -148,7 +148,7 @@ if ( count( $categories ) > 0 ) {
 			foreach ( $posts as $post ) {
 				$arrPostsTemp['postId']    = $post->ID;
 				$arrPostsTemp['postName']    = $post->post_title;
-				$arrPostsTemp['postData']    = $post->post_date;
+				$arrPostsTemp['postData']    = date("d, M Y", strtotime($post->post_date));
 				$arrPostsTemp['postLink']    = get_page_link( $post->ID );
 				$arrPostsTemp['postPicLink'] = get_post( get_post_thumbnail_id( $post->ID ) )->guid;
 			}
