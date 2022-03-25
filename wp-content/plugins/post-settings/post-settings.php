@@ -118,3 +118,18 @@ function true_projects_count_number_field( $args ) {
 		absint( $value )
 	);
 }
+
+add_action( 'admin_notices', 'true_post_sett_notice' );
+
+function true_post_sett_notice() {
+
+	if (
+		isset( $_GET['page'] )
+		&& 'true_post_sett' == $_GET['page']
+		&& isset( $_GET['settings-updated'] )
+		&& true == $_GET['settings-updated']
+	) {
+		echo '<div class="notice notice-success is-dismissible"><p>Settings data saved!</p></div>';
+	}
+
+}
