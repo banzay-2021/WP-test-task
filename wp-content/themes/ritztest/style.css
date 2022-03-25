@@ -220,11 +220,6 @@ footer h5 {
     text-align: center;
     width: 26%;
 }
-
-    .header-text-body {
-        width: 31%;
-    }
-}
 @media (max-width: 1460px) {
     .header-text-body {
         width: 36%;
@@ -266,6 +261,10 @@ footer h5 {
     line-height: 18px;
     padding: 5px 18px 5px 15px;
     margin-bottom: 10px;
+}
+.header-social-body {
+    bottom: 88px;
+    left: 6.2%;
 }
 
 .home-top-see-more {

@@ -45,8 +45,8 @@ get_header();
          style="background-image: url('/wp-content/uploads/2022/03/Homepage-About-Us-Image.png')">
         <div class="container position-absolute">
             <div class="row">
-                <div class="col-7 col-sm-12 col-lg"></div>
-                <div class="col-5 col-sm-12 col-lg">
+                <div class="col-md-12 col-sm-12 col-lg-7"></div>
+                <div class="col-md-12 col-sm-12 col-lg-5">
                     <div class="bg-white home-about-us-block">
                         <div class="m-4 mark-bg home-about-us-mark" style="background: #F14C26">
                             About Us

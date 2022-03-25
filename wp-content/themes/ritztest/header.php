@@ -118,6 +118,20 @@
                 Malta's Largest dedicated Kayak and SUP store
             </div>
         </div>
+        <div class="position-absolute header-social-body">
+            <div class="opacity-60">
+                <a class="mx-3" href="#">
+                    <svg class="bi" width="24" height="24">
+                        <use xlink:href="#facebook"></use>
+                    </svg>
+                </a>
+                <a class="" href="#">
+                    <svg class="bi" width="24" height="24">
+                        <use xlink:href="#instagram"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
         <img src="/wp-content/uploads/2022/03/Homepage-Video.png" alt="" sizes="100vw" width="1920" height="960">
     </div>
 </div>
