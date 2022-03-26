@@ -13,13 +13,13 @@ add_action( 'admin_menu', 'true_top_menu_page_post_sett', 25 );
 function true_top_menu_page_post_sett() {
 
 	add_menu_page(
-		'Post Settings', // тайтл страницы
-		'Post Settings', // текст ссылки в меню
-		'manage_options', // права пользователя, необходимые для доступа к странице
-		'true_post_sett', // ярлык страницы
-		'true_post_settings_page_callback', // функция, которая выводит содержимое страницы
-		'dashicons-admin-settings', // иконка, в данном случае из Dashicons
-		5 // позиция в меню
+		'Post Settings', // page title
+		'Post Settings', // menu link text
+		'manage_options', // user rights required to access the page
+		'true_post_sett', // page shortcut
+		'true_post_settings_page_callback', // a function that displays the content of the page
+		'dashicons-admin-settings', // icon, in this case from Dashicons
+		5 // menu position
 	);
 }
 
@@ -29,9 +29,9 @@ function true_post_settings_page_callback() {
 	<h3>' . get_admin_page_title() . '</h3>
 	<form method="post" action="options.php">';
 
-	settings_fields( 'true_post_sett_settings' ); // название настроек
-	do_settings_sections( 'true_post_sett' ); // ярлык страницы, не более
-	submit_button(); // функция для вывода кнопки сохранения
+	settings_fields( 'true_post_sett_settings' ); // setting name
+	do_settings_sections( 'true_post_sett' ); // page label, no more
+	submit_button(); // function to display the save button
 
 	echo '</form></div>';
 }
@@ -42,55 +42,55 @@ function true_post_sett_fields() {
 
 	// for Enter Jounals(Posts) Count
 	register_setting(
-		'true_post_sett_settings', // название настроек из предыдущего шага
-		'jounals_count_number_of_post_sett', // ярлык опции
-		'absint' // функция очистки
+		'true_post_sett_settings', // the name of the settings from the previous step
+		'jounals_count_number_of_post_sett', // option label
+		'absint' // cleaning function
 	);
 	// for Enter Projects Count
 	register_setting(
-		'true_post_sett_settings', // название настроек из предыдущего шага
-		'projects_count_number_of_post_sett', // ярлык опции
-		'absint' // функция очистки
+		'true_post_sett_settings', // the name of the settings from the previous step
+		'projects_count_number_of_post_sett', // option label
+		'absint' // cleaning function
 	);
 
-	// добавляем секцию без заголовка
+	// add section without heading
 	add_settings_section(
-		'jounals_count_post_sett_settings_section_id', // ID секции, пригодится ниже
-		'', // заголовок (не обязательно)
-		'', // функция для вывода HTML секции (необязательно)
-		'true_post_sett' // ярлык страницы
+		'jounals_count_post_sett_settings_section_id', // Section ID, useful below
+		'', // title (optional)
+		'', // function to output HTML section (optional)
+		'true_post_sett' // page shortcut
 	);
 	// Enter Projects Count - projects_count
 	add_settings_section(
-		'projects_count_post_sett_settings_section_id', // ID секции, пригодится ниже
-		'', // заголовок (не обязательно)
-		'', // функция для вывода HTML секции (необязательно)
-		'true_post_sett' // ярлык страницы
+		'projects_count_post_sett_settings_section_id', // Section ID, useful below
+		'', // title (optional)
+		'', // function to output HTML section (optional)
+		'true_post_sett' // page shortcut
 	);
 
 	// добавление поля
 	add_settings_field(
 		'jounals_count_number_of_post_sett',
 		'Enter Jounals(Posts) Count',
-		'true_number_field', // название функции для вывода
-		'true_post_sett', // ярлык страницы
-		'projects_count_post_sett_settings_section_id', // // ID секции, куда добавляем опцию
+		'true_number_field', // function name to output
+		'true_post_sett', // page shortcut
+		'projects_count_post_sett_settings_section_id', // ID of the section where we add the option
 		array(
 			'label_for' => 'jounals_count_number_of_post_sett',
-			'class'     => 'post-sett-class', // для элемента <tr>
-			'name'      => 'jounals_count_number_of_post_sett', // любые доп параметры в колбэк функцию
+			'class'     => 'post-sett-class', // for the <tr> element
+			'name'      => 'jounals_count_number_of_post_sett', // any additional parameters to the callback function
 		)
 	);
 	add_settings_field(
 		'projects_count_number_of_post_sett',
 		'Enter Projects Count',
-		'true_projects_count_number_field', // название функции для вывода
-		'true_post_sett', // ярлык страницы
-		'projects_count_post_sett_settings_section_id', // ID секции, куда добавляем опцию
+		'true_projects_count_number_field', // function name to output
+		'true_post_sett', // page shortcut
+		'projects_count_post_sett_settings_section_id', // ID of the section where we add the option
 		array(
 			'label_for' => 'projects_count_number_of_post_sett',
-			'class'     => 'post-sett-class', // для элемента <tr>
-			'name'      => 'projects_count_number_of_post_sett', // любые доп параметры в колбэк функцию
+			'class'     => 'post-sett-class', // for the <tr> element
+			'name'      => 'projects_count_number_of_post_sett', // any additional parameters to the callback function
 		)
 	);
 }
@@ -108,7 +108,7 @@ function true_number_field( $args ) {
 }
 
 function true_projects_count_number_field( $args ) {
-	// получаем значение из базы данных
+	// get value from database
 	$value = get_option( $args['name'] );
 
 	printf(

@@ -13,11 +13,11 @@ function true_external_posts_page() {
 
 	add_submenu_page(
 		'post.php',
-		'Count External Posts', // тайтл страницы
-		'Count External Posts', // текст ссылки в меню
-		'manage_options', // права пользователя, необходимые для доступа к странице
-		'true_external_posts', // ярлык страницы
-		'true_external_posts_page_callback' // функция, которая выводит содержимое страницы
+		'Count External Posts', // page title
+		'Count External Posts', // menu link text
+		'manage_options', // user rights required to access the page
+		'true_external_posts', // page shortcut
+		'true_external_posts_page_callback' // a function that displays the content of the page
 	);
 }
 
@@ -46,7 +46,7 @@ function true_external_posts_page_callback() {
 				    // IE8-
 				    externalPosts.innerText = data;
 				} else {
-				    // Нормальные браузеры
+				    // Normal browsers
 				    externalPosts.textContent = data;
 				}
 			});
