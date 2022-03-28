@@ -28,7 +28,7 @@ class FooterWalkerNavMenu extends Walker_Nav_Menu {
 class TopWalkerNavMenu extends Walker_Nav_Menu {
 
 	function start_lvl( &$output, $depth = 0, $args = null ) {
-		$output .= '<ul class="dropdown-menu">';
+		$output .= '<ul class="dropdown-menu"  aria-labelledby="navbarDropdown">';
 	}
 
 	function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
@@ -54,7 +54,7 @@ class TopWalkerNavMenu extends Walker_Nav_Menu {
 			$class_names .= ' active';
 		}
 		if ($itemHasChildren) {
-			$class_names .= ' parent';
+			$class_names .= ' parent dropdown';
 		}
 		$class_names .= '"';
 
@@ -67,10 +67,12 @@ class TopWalkerNavMenu extends Walker_Nav_Menu {
 		} else {
 			$attributes .= 'dropdown-item';
 		}
+		$attributesDropdown = '';
 		if ($itemHasChildren) {
 			$attributes .= ' dropdown-toggle';
+			$attributesDropdown .= ' id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"';
 		}
-		$attributes .= '"';
+		$attributes .= '"' . $attributesDropdown;
 
 		$item_output = $args->before;
 		$item_output .= '<a' . $attributes . '>';
@@ -112,6 +114,7 @@ function load_bootstrap() {
 
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.css' );
 	wp_enqueue_style( 'stylesheet-css', get_template_directory_uri() . '/assets/css/stylesheet.css' );
+	wp_enqueue_style( 'bootstrap-icons-css', get_template_directory_uri() . '/assets/css/bootstrap-icons.css' );
 	wp_enqueue_style( 'style-css', get_template_directory_uri() . '/style.css' );
 
 }

@@ -64,48 +64,59 @@
 </head>
 <body <?php body_class(); ?>>
 <?php
-    $hasFooterShop = has_nav_menu( 'footerShop' );
+$hasFooterShop = has_nav_menu( 'footerShop' );
 ?>
-<div class="header position-relative">
-    <div id="top-menu" class="position-fixed py-2 py-md-4 w-100 zi-1">
+<div class="container-fluid p-0 header position-relative">
+    <div id="top-menu" class="position-fixed py-2 w-100 zi-1">
         <div class="container">
             <div class="row">
-                <div class="d-flex align-items-center logo-top ps-md-4 ms-md-2">
-                    <a href="/" class="d-flex link-dark text-decoration-none">
-                        <img class="logo" width="98" height="48"
-                             src="<?= get_template_directory_uri(); ?>/assets/images/Ritz_Logo_Light.svg">
-                    </a>
-                </div>
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <div class="container w-100 p-0 px-md-4">
+                        <a href="/" class="navbar-brand">
+                            <img class="logo" width="98" height="48"
+                                 src="<?= get_template_directory_uri(); ?>/assets/images/Ritz_Logo_Light.svg">
+                        </a>
+						<?php if ( $hasFooterShop ) { ?>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-header">
+									<?php
+									wp_nav_menu(
+										array(
+											'container'      => '',
+											'depth'          => 2,
+											'items_wrap'     => '%3$s',
+											'theme_location' => 'footerShop',
+											'walker'         => new TopWalkerNavMenu(),
+										)
+									);
+									?>
+                                </ul>
+                                <form class="d-flex">
 
-                <nav class="d-flex align-items-center col-6 col-lg-6 navbar-expand-lg navbar-header">
-
-                    <?php if ( $hasFooterShop ) { ?>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-
-	                            <?php
-	                            wp_nav_menu(
-		                            array(
-			                            'container'      => '',
-			                            'depth'          => 2,
-			                            'items_wrap'     => '%3$s',
-			                            'theme_location' => 'footerShop',
-			                            'walker'         => new TopWalkerNavMenu(),
-		                            )
-	                            );
-	                            ?>
-                            </ul>
-                        </div>
-                    <?php } ?>
+<!--                                    <input class="form-control me-2" type="search" placeholder="Search"-->
+<!--                                           aria-label="Search">-->
+<!--                                    <button class="btn btn-outline-success" type="submit">Search</button>-->
+                                    <div class="top-searsh">
+                                        <i class="bi bi-search"></i>
+                                    </div>
+                                    <div class="top-person">
+                                        <i class="bi bi-person"></i>
+                                    </div>
+                                    <div class="top-cart">
+                                        <i class="bi bi-cart3"></i>
+                                        <div class="count-items">2</div>
+                                    </div>
+                                </form>
+                            </div>
+						<?php } ?>
+                    </div>
                 </nav>
 
-                <div class="d-flex align-items-center col-4 col-lg-4 ps-4">
-
-                </div>
             </div>
         </div>
     </div>

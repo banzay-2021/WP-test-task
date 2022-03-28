@@ -1,4 +1,0 @@
-log_id,action_id,message,log_date_gmt,log_date_local
-1,6,action created,2022-03-15 20:27:13,2022-03-15 20:27:13
-2,6,action started via WP Cron,2022-03-15 20:28:26,2022-03-15 20:28:26
-3,6,action complete via WP Cron,2022-03-15 20:28:29,2022-03-15 20:28:29

@@ -41,10 +41,10 @@ get_header();
         </div>
     </div>
 
-    <div class="mt-5 position-relative home-about-us"
+    <div class="container-fluid mt-5 position-relative home-about-us"
          style="background-image: url('/wp-content/uploads/2022/03/Homepage-About-Us-Image.png')">
         <div class="container position-absolute">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-md-12 col-sm-12 col-lg-7"></div>
                 <div class="col-md-12 col-sm-12 col-lg-5">
                     <div class="bg-white home-about-us-block">
@@ -172,7 +172,7 @@ if ( count( $categories ) > 0 ) {
             </div>
         </div>
         <div class="container mt-2 mb-5">
-            <div class="row">
+            <div class="row align-items-top">
 				<?php
 				if ( count( $arrPosts ) > 0 ) {
 					foreach ( $arrPosts as $post ) {

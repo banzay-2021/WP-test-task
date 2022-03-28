@@ -20,7 +20,7 @@ html {
     /* 2 */
 }
 
-.body {
+.body * {
     font-family: 'Gotham Pro';
     font-size: 14px;
     font-weight: 400;
@@ -180,8 +180,10 @@ footer h5 {
     border-radius: unset;
     left: 0;
 }
-.navbar-header li.nav-item {
-    padding: 0 10px;
+@
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 .navbar-header li.nav-item:hover {
     background: #fff;
@@ -189,8 +191,19 @@ footer h5 {
 .navbar-header li.nav-item:hover .color-text-white {
     color: #1A1A1A !important;
 }
-.navbar-header li.nav-item:hover .dropdown-menu {
-    display: block;
+.nav-link.color-text-white.dropdown-toggle.show {
+    background: #fff;
+    color: #1A1A1A !important;
+}
+/*.navbar-header li.nav-item:hover .dropdown-menu {*/
+/*    display: block;*/
+/*}*/
+.navbar-dark .navbar-toggler {
+    color: rgba(255, 255, 255, 1) !important;
+    border-color: rgba(255, 255, 255, 1) !important;
+}
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 .navbar-header .dropdown-toggle::after {
     display: block;
@@ -207,6 +220,41 @@ footer h5 {
 }
 .color-text-white {
     color: #fff !important;
+}
+ul.dropdown-menu[data-bs-popper] {
+    margin-top: 0;
+}
+.navbar-brand {
+    margin-right: 2.5rem !important;
+}
+.top-searsh {
+    color: #fff;
+    font-size: 28px;
+    padding: 0 1.5rem 0 0;
+}
+.top-person {
+    color: #fff;
+    font-size: 28px;
+    padding: 0;
+}
+.top-cart {
+    color: #fff;
+    font-size: 28px;
+    padding: 0 0 0 1.5rem;
+    position: relative;
+    margin-right: 1rem;
+}
+.top-cart .count-items {
+    background: #F14C26;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 13px;
+    position: absolute;
+    top: 13px;
+    right: -21px;
+    width: 17px;
+    height: 20px;
 }
 
 .header-text-body {

@@ -23,7 +23,7 @@ $arrFooterMenus = [
     <div class="container pt-5">
         <div class="row my-5">
             <div class="col-12 col-lg-4 ps-4 mb-4 inline">
-                <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                <a href="/" class="align-items-center mb-3 px-md-2 link-dark text-decoration-none">
                     <img class="logo" width="98" height="48"
                          src="<?= get_template_directory_uri(); ?>/assets/images/Ritz_Logo_Dark.svg">
                 </a>
