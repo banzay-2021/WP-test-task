@@ -73,47 +73,55 @@ get_header();
         </div>
     </div>
     <div class="container mt-2">
-        <div class="row">
-            <div class="col-lg-3">
-                <div class="m-4 home-favourites-col">
-                    <div class="home-favourites-title">
-                        Kayaks
+        <div id="carouselExampleControls" class="carousel px-4 slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+				<?php
+				for ( $i = 0; $i < 1; $i ++ ) {
+					?>
+                    <div class="carousel-item <?php echo( ( $i == 0 ) ? 'active' : '' ); ?>">
+                        <div class="row">
+							<?php
+							for ( $y = 0; $y < 4; $y ++ ) {
+								?>
+                                <div class="col">
+                                    <div class="card" style="width: 18rem;">
+                                        <div class="card-pic">
+                                            <?php
+                                            if ($y == 0) {
+                                                ?>
+                                                <div class="new-item">new</div>
+                                                <?php
+                                            }
+                                            ;?>
+                                            <img src="/wp-content/uploads/2022/03/i02.png" class="card-img-top" alt="1">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+								<?php
+							}
+							?>
+                        </div>
                     </div>
-                    <a class="home-favourites-link">
-                        Shop Kayaks <span class="icon-chevron right"></span>
-                    </a>
-                </div>
+					<?php
+				}
+				?>
             </div>
-            <div class="col-lg-3">
-                <div class="m-4 home-favourites-col">
-                    <div class="home-favourites-title">
-                        Kayaks
-                    </div>
-                    <a class="home-favourites-link">
-                        Shop Kayaks <span class="icon-chevron right"></span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="m-4 home-favourites-col">
-                    <div class="home-favourites-title">
-                        Kayaks
-                    </div>
-                    <a class="home-favourites-link">
-                        Shop Kayaks <span class="icon-chevron right"></span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="m-4 home-favourites-col">
-                    <div class="home-favourites-title">
-                        Kayaks
-                    </div>
-                    <a class="home-favourites-link">
-                        Shop Kayaks <span class="icon-chevron right"></span>
-                    </a>
-                </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
 
@@ -146,9 +154,9 @@ if ( count( $categories ) > 0 ) {
 		if ( count( $posts ) > 0 ) {
 			$arrPostsTemp['empty'] = false;
 			foreach ( $posts as $post ) {
-				$arrPostsTemp['postId']    = $post->ID;
+				$arrPostsTemp['postId']      = $post->ID;
 				$arrPostsTemp['postName']    = $post->post_title;
-				$arrPostsTemp['postData']    = date("d, M Y", strtotime($post->post_date));
+				$arrPostsTemp['postData']    = date( "d, M Y", strtotime( $post->post_date ) );
 				$arrPostsTemp['postLink']    = get_page_link( $post->ID );
 				$arrPostsTemp['postPicLink'] = get_post( get_post_thumbnail_id( $post->ID ) )->guid;
 			}
@@ -179,12 +187,14 @@ if ( count( $categories ) > 0 ) {
 						?>
                         <div class="col-lg-4 col-md-12">
                             <div class="m-4 home-updated-col">
-                                <div class="home-updated-pic" style="background-image: url('<?= $post['postPicLink']; ?>'">)"></div>
-                                <div class="home-updated-title-cat <?= get_post_meta($post['postId'], 'color_mark', true); ?>">
-	                                <?= $post['catName']; ?>
+                                <div class="home-updated-pic"
+                                     style="background-image: url('<?= $post['postPicLink']; ?>'">)">
+                                </div>
+                                <div class="home-updated-title-cat <?= get_post_meta( $post['postId'], 'color_mark', true ); ?>">
+									<?= $post['catName']; ?>
                                 </div>
                                 <div class="home-updated-data">
-		                            <?= $post['postData']; ?>
+									<?= $post['postData']; ?>
                                 </div>
                                 <div class="home-updated-title">
                                     <a href="<?= $post['postLink']; ?>"><?= $post['postName']; ?></a>

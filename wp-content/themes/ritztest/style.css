@@ -377,3 +377,21 @@ ul.dropdown-menu[data-bs-popper] {
     text-decoration: none;
     color: #1A1A1A;
 }
+
+.card-pic {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+    position: relative;
+}
+.new-item {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 18px;
+    font-style: italic;
+    text-transform: uppercase;
+    clip-path: polygon(7% 0, 100% 0, 93% 100%, 0 100%);
+    color: #FFF;
+    padding: 3px 13px 3px 10px;
+    background-color: #F1B426;
+    position: absolute;
+}
