@@ -22,7 +22,7 @@ $arrFooterMenus = [
 <footer class="bg-col pt-5 mt-5 color-text-ritz">
     <div class="container pt-5">
         <div class="row my-5">
-            <div class="col-12 col-lg-4 ps-4 mb-4 inline">
+            <div class="col-12 col-lg-4 ps-md-4 mb-4 inline">
                 <a href="/" class="align-items-center mb-3 px-md-2 link-dark text-decoration-none">
                     <img class="logo" width="98" height="48"
                          src="<?= get_template_directory_uri(); ?>/assets/images/Ritz_Logo_Dark.svg">
@@ -31,7 +31,7 @@ $arrFooterMenus = [
 			<?php
 			foreach ( $arrFooterMenus as $item ) {
 				if ( $item['hasFooterMenu'] ) { ?>
-                    <div class="col-6 col-md ps-4 mb-4">
+                    <div class="col-6 col-md ps-md-4 mb-4">
                         <h5><?= wp_get_nav_menu_name( $item['theme_location'] ) ?></h5>
                         <ul class="nav flex-column opacity-60">
 							<?php
@@ -52,7 +52,7 @@ $arrFooterMenus = [
 			}
 			?>
 
-            <div class="col-6 col-md ps-4 mb-4">
+            <div class="col-6 col-md ps-md-4 mb-4">
                 <h5>Contact Us</h5>
                 <ul class="nav flex-column opacity-60">
                     <li class="nav-item mb-2">

@@ -136,11 +136,6 @@ a.home-categories-link {
     margin-top: 0 !important;
 }
 
-.home-favourites-col {
-    width: 280px;
-    height: 352px;
-}
-
 .bg-col {
     background: #F6F6F6;
 }
@@ -160,8 +155,8 @@ footer h5 {
     color: #1A1A1A;
 }
 
-.zi-1 {
-    z-index: 1 !important;
+.zi-2 {
+    z-index: 2 !important;
 }
 .logo-top {
     width: 150px;
@@ -180,7 +175,6 @@ footer h5 {
     border-radius: unset;
     left: 0;
 }
-@
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 1rem;
     padding-left: 1rem;
@@ -314,6 +308,10 @@ ul.dropdown-menu[data-bs-popper] {
     bottom: 88px;
     left: 6.2%;
 }
+.home-top-pic {
+    min-height: 474px;
+}
+
 
 .home-top-see-more {
     text-align: right;
@@ -378,10 +376,60 @@ ul.dropdown-menu[data-bs-popper] {
     color: #1A1A1A;
 }
 
+/**
+* Section Our Favourites
+*/
+.home-favourites-box {
+    margin-bottom: 112px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    top: -75px;
+    z-index: 0;
+    width: 40px;
+    height: 40px;
+    color: #1A1A1A;
+    background-color: #F6F6F6;
+    opacity: 1;
+}
+.carousel-control-prev {
+    right: 4.5rem;
+    left: unset;
+}
+.carousel-control-next {
+    right: 1.5rem;
+}
+.carousel-control-prev:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:hover,
+.carousel-control-next:focus {
+    color: #1A1A1A;
+    text-decoration: none;
+    outline: 0;
+    opacity: 0.5;
+}
+.card-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #d2e3ff;
+    border: 1px solid #1b7dff;
+    z-index: 1;
+    border-radius: 4px;
+    display: block;
+}
+.home-favourites-col .card:hover .card-hover {
+    opacity: 0.5;
+    visibility: visible;
+}
 .card-pic {
     flex: 1 1 auto;
     padding: 1rem 1rem;
     position: relative;
+    border: 1px solid #F6F6F6;
+    border-radius: 4px;
 }
 .new-item {
     display: inline-block;
@@ -394,4 +442,48 @@ ul.dropdown-menu[data-bs-popper] {
     padding: 3px 13px 3px 10px;
     background-color: #F1B426;
     position: absolute;
+}
+.pts-bpx {
+    padding: 5px 13px 5px 10px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    font-style: italic;
+    clip-path: polygon(7% 0, 100% 0, 93% 100%, 0 100%);
+    color: #1A1A1A;
+    background-color: #E9E9E9;
+    position: absolute;
+    bottom: 18px;
+}
+.mark-item {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom: 20px;
+    right: 16px;
+    background-size: cover;
+    background-position: center;
+}
+.card-touring {
+    font-size: 12px;
+    line-height: 18px;
+    color: #1A1A1A;
+    opacity: .6;
+    padding: 2px 0;
+    text-transform: uppercase;
+}
+.card-title {
+    font-weight: 900;
+    color: #1A1A1A;
+}
+.card-price {
+    color: #1A1A1A;
+    opacity: 0.8;
+    font-size: 18px;
+    line-height: 24px;
+}
+.card {
+    border: none;
+    border-radius: unset;
+    border-right: 4px;
 }

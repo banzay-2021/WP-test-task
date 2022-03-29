@@ -67,7 +67,7 @@
 $hasFooterShop = has_nav_menu( 'footerShop' );
 ?>
 <div class="container-fluid p-0 header position-relative">
-    <div id="top-menu" class="position-fixed py-2 w-100 zi-1">
+    <div id="top-menu" class="position-fixed py-2 w-100 zi-2">
         <div class="container">
             <div class="row">
                 <nav class="navbar navbar-expand-lg navbar-dark">
@@ -143,6 +143,6 @@ $hasFooterShop = has_nav_menu( 'footerShop' );
                 </a>
             </div>
         </div>
-        <img src="/wp-content/uploads/2022/03/Homepage-Video.png" alt="" sizes="100vw" width="1920" height="960">
+        <img class="home-top-pic" src="/wp-content/uploads/2022/03/Homepage-Video.png" alt="" sizes="100vw" width="1920" height="960">
     </div>
 </div>
