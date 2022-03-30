@@ -99,8 +99,6 @@ wp_reset_postdata();
 $colInRow   = 4;
 $countPosts = count( $arrPosts );
 $countRows  = ceil( $countPosts / $colInRow );
-var_dump( $countPosts );
-var_dump( $countRows );
 ?>
     <div class="container mt-5 pt-5">
         <div class="row">
