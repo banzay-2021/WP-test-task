@@ -41,7 +41,7 @@ get_header();
         </div>
     </div>
 
-    <div class="container-fluid mt-5 position-relative home-about-us"
+    <div class="container-fluid mt-5 position-relative home-about-us-box"
          style="background-image: url('/wp-content/uploads/2022/03/Homepage-About-Us-Image.png')">
         <div class="container position-absolute">
             <div class="row align-items-center">
@@ -127,7 +127,7 @@ $countRows  = ceil( $countPosts / $colInRow );
 									}
 									?>
                                     <div class="col mb-3 home-favourites-col">
-                                        <div class="card">
+                                        <div class="card" style="width: 18rem;">
                                             <a href="<?= $arrPosts[ $idArr ]['postLink']; ?>" class="card-hover"></a>
                                             <div class="card-pic">
 												<?php

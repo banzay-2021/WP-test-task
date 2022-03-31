@@ -106,15 +106,23 @@ a.home-categories-link {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.mt-5.home-about-us {
+.home-about-us-box {
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     height: calc(100vw / 1.78);
+    min-height: 500px;
 }
 .home-about-us-block {
     padding: 80px 56px;
 }
+@media screen and (max-width: 800px){
+    .home-about-us-block {
+        padding: 0;
+        opacity: 0.8;
+    }
+}
+
 .home-about-us-title {
     font-size: 30px;
     font-weight: 900;
