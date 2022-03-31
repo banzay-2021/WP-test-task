@@ -2,7 +2,7 @@
 get_header();
 
 ?>
-    <div class="container home-categories">
+        <div class="container px-md-4 home-categories">
         <div class="row justify-content-between">
 			<?php
 			$categories = get_categories(
@@ -18,8 +18,8 @@ get_header();
 				foreach ( $categories as $category ) {
 					$image = wp_get_attachment_url( get_term_meta( $category->term_id, 'thumbnail_id', true ) );
 					?>
-                    <div class="col-12 col-lg">
-                        <div class="mb-5 home-categories-col"
+                    <div class="col-lg-6">
+                        <div class="mb-4 home-categories-col"
                              style="background-image: url(<?= $image; ?>)">
                             <div class="home-categories-title">
 								<?= $category->name; ?>
@@ -100,24 +100,24 @@ $colInRow   = 4;
 $countPosts = count( $arrPosts );
 $countRows  = ceil( $countPosts / $colInRow );
 ?>
-    <div class="container mt-5 pt-5">
+    <div class="container mt-5 pt-5 px-md-4">
         <div class="row">
-            <div class="col-lg-6 m-4 pt-5 home-top-categories-title">
+            <div class="col-lg-6 my-4 pt-5 home-top-categories-title">
                 Our Favourites
             </div>
         </div>
     </div>
-    <div class="container mt-2 home-favourites-box">
-        <div id="carouselExampleControls" class="carousel px-4 slide" data-bs-ride="carousel">
+    <div class="container mt-2 px-md-4 home-favourites-box">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
 				<?php
 				if ( $countPosts > 0 ) {
 					for ( $i = 0; $i < $countRows; $i ++ ) {
 						?>
                         <div class="carousel-item <?php echo( ( $i == 0 ) ? 'active' : '' ); ?>">
-                            <div class="row justify-content-between">
+                            <div class="row justify-content-around">
 								<?php
-								for ( $y = 0; $y < $countPosts; $y ++ ) {
+								for ( $y = 0; $y < $colInRow; $y ++ ) {
 									$idArr = $i * $colInRow + $y;
 									if ( $idArr >= $countPosts ) {
 										?>
@@ -125,12 +125,9 @@ $countRows  = ceil( $countPosts / $colInRow );
 										<?php
 										continue;
 									}
-									if ( $y > ( $colInRow - 1 ) ) {
-										break;
-									}
 									?>
                                     <div class="col mb-3 home-favourites-col">
-                                        <div class="card" style="width: 18rem;">
+                                        <div class="card">
                                             <a href="<?= $arrPosts[ $idArr ]['postLink']; ?>" class="card-hover"></a>
                                             <div class="card-pic">
 												<?php
@@ -233,26 +230,28 @@ if ( count( $categories ) > 0 ) {
 ?>
 
     <div class="bg-col py-5">
-        <div class="container mt-5">
+        <div class="container mt-4 pt-5 px-md-4">
             <div class="row">
-                <div class="col-6 col-sm my-3 home-top-categories-title">
+                <div class="col-lg-6 col my-4 home-top-categories-title">
                     Keep Updated
                 </div>
-                <div class="col-6 col-sm my-3 home-top-see-more">
+                <div class="col-lg-6 col my-4 home-top-see-more">
                     <a href="#" class="btn btn-dark home-see-more-btn">See More</a>
                 </div>
             </div>
         </div>
-        <div class="container mt-2 mb-5">
-            <div class="row align-items-top  justify-content-between">
+        <div class="container mt-2 mb-5 px-md-4">
+            <div class="row align-items-top justify-content-between">
 				<?php
 				if ( count( $arrPosts ) > 0 ) {
 					foreach ( $arrPosts as $post ) {
 						?>
-                        <div class="col-lg-4 col-md-12">
-                            <div class="m-4 home-updated-col">
-                                <div class="home-updated-pic"
-                                     style="background-image: url('<?= $post['postPicLink']; ?>'">)">
+                        <div class="col-lg-4 mb-5">
+                            <div class="home-updated-col">
+                                <div class="home-updated-pic">
+                                    <img src="<?= $post['postPicLink']; ?>"
+                                         class="card-img-top"
+                                         alt="<?= $post['postName']; ?>">
                                 </div>
                                 <div class="home-updated-title-cat <?= get_post_meta( $post['postId'], 'color_mark', true ); ?>">
 									<?= $post['catName']; ?>

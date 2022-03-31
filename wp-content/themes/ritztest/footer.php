@@ -20,9 +20,9 @@ $arrFooterMenus = [
 ];
 ?>
 <footer class="bg-col pt-5 mt-5 color-text-ritz">
-    <div class="container pt-5">
+    <div class="container pt-5 ps-md-4">
         <div class="row my-5">
-            <div class="col-12 col-lg-4 ps-md-4 mb-4 inline">
+            <div class="col-12 col-lg-4 mb-4 inline">
                 <a href="/" class="align-items-center mb-3 px-md-2 link-dark text-decoration-none">
                     <img class="logo" width="98" height="48"
                          src="<?= get_template_directory_uri(); ?>/assets/images/Ritz_Logo_Dark.svg">
@@ -82,7 +82,7 @@ $arrFooterMenus = [
         </symbol>
     </svg>
     <div class="footer-block-sec">
-        <div class="container">
+        <div class="container ps-md-4">
             <div class="row">
                 <div class="d-flex justify-content-between ps-4 py-3">
                     <div class="opacity-60">
