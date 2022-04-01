@@ -24,15 +24,15 @@ if ( is_home() ) {
             </div>
         </div>
         <div class="position-absolute header-social-body">
-            <div class="opacity-60">
+            <div class="">
                 <a class="mx-3" href="#">
                     <svg class="bi" width="24" height="24">
-                        <use xlink:href="#facebook"></use>
+                        <use xlink:href="#facebook-light"></use>
                     </svg>
                 </a>
                 <a class="" href="#">
                     <svg class="bi" width="24" height="24">
-                        <use xlink:href="#instagram"></use>
+                        <use xlink:href="#instagram-light"></use>
                     </svg>
                 </a>
             </div>
