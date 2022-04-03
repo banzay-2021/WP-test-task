@@ -32,13 +32,13 @@ $hasFooterShop = has_nav_menu( 'footerShop' );
                     <!--                                    <input class="form-control me-2" type="search" placeholder="Search"-->
                     <!--                                           aria-label="Search">-->
                     <!--                                    <button class="btn btn-outline-success" type="submit">Search</button>-->
-                    <div class="top-searsh">
+                    <div class="top-search color-text-white">
                         <i class="bi bi-search"></i>
                     </div>
-                    <div class="top-person">
+                    <div class="top-person color-text-white">
                         <i class="bi bi-person"></i>
                     </div>
-                    <div class="top-cart">
+                    <div class="top-cart color-text-white">
                         <i class="bi bi-cart3"></i>
                         <div class="count-items">2</div>
                     </div>

@@ -16,6 +16,8 @@ if ( ! class_exists( 'TopWalkerNavMenu' ) ) {
 
 		function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
 
+			$colorTextWhite = is_home() ? 'color-text-white' : 'color-text-black';
+
 			$itemHasChildren = false;
 			if ( ! empty( $item->classes ) ) {
 				foreach ( $item->classes as $class ) {
@@ -46,7 +48,7 @@ if ( ! class_exists( 'TopWalkerNavMenu' ) ) {
 			$attributes = ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) . '"' : '';
 			$attributes .= ' class="';
 			if ( $item->menu_item_parent == '0' ) {
-				$attributes .= 'nav-link color-text-white';
+				$attributes .= 'nav-link ' . $colorTextWhite;
 			} else {
 				$attributes .= 'dropdown-item';
 			}

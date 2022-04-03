@@ -23,7 +23,7 @@ $arrFooterMenus = [
     <div class="container pt-5 ps-md-4">
         <div class="row my-5">
             <div class="col-12 col-lg-4 mb-4 inline">
-                <a href="/" class="align-items-center mb-3 px-md-2 link-dark text-decoration-none">
+                <a href="/" class="align-items-center mb-3 link-dark text-decoration-none">
                     <img class="logo" width="98" height="48"
                          src="<?= get_template_directory_uri(); ?>/assets/images/Ritz_Logo_Dark.svg">
                 </a>
@@ -101,12 +101,12 @@ $arrFooterMenus = [
                 <div class="d-flex justify-content-between ps-4 py-3">
                     <div class="opacity-60">
                         ©2022 Ritz Kayaks Marine
-                        <a class="link-dark mx-3" href="#">
+                        <a class="link-dark mx-3" href="<?= $linkFacebook;?>">
                             <svg class="bi" width="24" height="24">
                                 <use xlink:href="#facebook-dark"></use>
                             </svg>
                         </a>
-                        <a class="link-dark" href="#">
+                        <a class="link-dark" href="<?= $linkInstagram;?>">
                             <svg class="bi" width="24" height="24">
                                 <use xlink:href="#instagram-dark"></use>
                             </svg>
@@ -114,7 +114,8 @@ $arrFooterMenus = [
                     </div>
                     <ul class="list-unstyled d-flex m-0 ps-md-4">
                         <li class="opacity-80">
-                            Designed and Developed by
+                            Designed and Developed by <img class="logo-think" width="51" height="16"
+                                                           src="<?= get_template_directory_uri(); ?>/assets/images/Think_Logo_Dark.svg">
                         </li>
                     </ul>
                 </div>

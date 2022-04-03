@@ -2,11 +2,11 @@
 $hasFooterShop = has_nav_menu( 'footerShop' );
 ?>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav class="navbar navbar-expand-lg navbar-light">
 	<div class="container w-100 p-0">
 		<a href="/" class="navbar-brand">
 			<img class="logo" width="98" height="48"
-			     src="<?= get_template_directory_uri(); ?>/assets/images/Ritz_Logo_Light.svg">
+			     src="<?= get_template_directory_uri(); ?>/assets/images/Ritz_Logo_Dark.svg">
 		</a>
 		<?php if ( $hasFooterShop ) { ?>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -33,13 +33,13 @@ $hasFooterShop = has_nav_menu( 'footerShop' );
 					<!--                                    <input class="form-control me-2" type="search" placeholder="Search"-->
 					<!--                                           aria-label="Search">-->
 					<!--                                    <button class="btn btn-outline-success" type="submit">Search</button>-->
-					<div class="top-searsh">
+					<div class="top-search color-text-black">
 						<i class="bi bi-search"></i>
 					</div>
-					<div class="top-person">
+					<div class="top-person color-text-black">
 						<i class="bi bi-person"></i>
 					</div>
-					<div class="top-cart">
+					<div class="top-cart color-text-black">
 						<i class="bi bi-cart3"></i>
 						<div class="count-items">2</div>
 					</div>
