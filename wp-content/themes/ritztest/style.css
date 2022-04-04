@@ -513,9 +513,98 @@ ul.dropdown-menu[data-bs-popper] {
 
 .breadcrumb-item a {
     color: #787878;
-    text-decoration: underline;
+    text-decoration: none !important;
 }
 .breadcrumb-item.active {
     color: #1c1c1c;
     font-weight: 600;
+}
+.text-justify {
+    text-align: justify;
+}
+.woocommerce-product-gallery__wrapper, .woocommerce-product-gallery__image {
+    border: 1px solid #ececec;
+}
+.sales-indo {
+    position: absolute;
+    background: #F14C26;
+    font-style: italic;
+    left: 2rem;
+    top: 1rem;
+}
+.product-description-text {
+    height: 3rem;
+    overflow: hidden;
+    text-align: justify;
+}
+.gradient-description {
+    left: 0;
+    bottom: 0;
+    height: 50%;
+    background: linear-gradient(rgba(0,0,0,0) 0, rgba(255, 255, 255, 0.8) 60%);
+    width: 100%;
+}
+.read-more {
+    font-size: 15px;
+    margin: 12px 0;
+    font-weight: 600;
+    display: inline-block;
+    cursor: pointer;
+}
+.read-more .icon-chevron.down {
+    margin: 0 0 2px 10px;
+}
+.read-more .icon-chevron.up {
+    margin: 0 0 0px 10px;
+}
+.product-description-text.open-box {
+    overflow: unset;
+    height: 100%;
+}
+.product-description-text.open-box .gradient-description {
+    height: 0;
+}
+.price-points-box .pts-bpx {
+    display: inline-block;
+    position: unset;
+    bottom: unset;
+}
+.new-price {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0 6px 0 0;
+    vertical-align: middle;
+}
+.old-price {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.old-price::after {
+    position: absolute;
+    display: block;
+    content: '';
+    border-top: 1px solid #1A1A1A;
+    width: 112%;
+    left: -6%;
+    top: 43%;
+}
+.add-to-cart-box form {
+    margin: 0 !important;
+}
+.add-to-cart-box .screen-reader-text {
+    display: none;
+}
+.add-to-cart-box input {
+    width: 4rem;
+    text-align: center;
+    height: 2rem;
+    border: 1px solid #ececec;
+    border-radius: 4px;
+}
+.add-to-cart-box button.button {
+    width: 89% !important;
+    background: #f24d26 !important;
 }
