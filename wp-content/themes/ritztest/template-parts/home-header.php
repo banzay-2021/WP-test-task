@@ -1,7 +1,7 @@
 <?php
-$isHome = is_home() ? 'home-page' : '';
+$isHome = is_home() ? 'home-page' : 'not-home-page';
 ?>
-<div id="top-menu" class="position-fixed py-2 w-100 zi-2 <?= $isHome; ?>">
+<div id="top-menu" class="position-fixed py-2 w-100 zi-200 <?= $isHome; ?>">
     <div class="container px-md-4">
         <div class="row">
 			<?php

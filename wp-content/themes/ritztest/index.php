@@ -1,5 +1,6 @@
 <?php
 get_header();
+
 if ( is_home() ) {
 	get_template_part( 'inc/layout/home-section-categories' );
 	get_template_part( 'inc/layout/home-about-us' );
