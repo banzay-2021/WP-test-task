@@ -44,3 +44,13 @@ function load_bootstrap() {
 }
 
 add_action( 'wp_enqueue_scripts', 'load_bootstrap' );
+
+add_theme_support( 'html5', array(
+	'comment-list',
+	'comment-form',
+	'search-form',
+	'gallery',
+	'caption',
+	'script',
+	'style',
+) );

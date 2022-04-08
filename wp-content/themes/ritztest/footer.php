@@ -101,12 +101,12 @@ $arrFooterMenus = [
                 <div class="d-flex justify-content-between ps-4 py-3">
                     <div class="opacity-60">
                         ©2022 Ritz Kayaks Marine
-                        <a class="link-dark mx-3" href="<?= $linkFacebook;?>">
+                        <a class="link-dark mx-3" href="<?= $linkFacebook; ?>">
                             <svg class="bi" width="24" height="24">
                                 <use xlink:href="#facebook-dark"></use>
                             </svg>
                         </a>
-                        <a class="link-dark" href="<?= $linkInstagram;?>">
+                        <a class="link-dark" href="<?= $linkInstagram; ?>">
                             <svg class="bi" width="24" height="24">
                                 <use xlink:href="#instagram-dark"></use>
                             </svg>
@@ -124,7 +124,10 @@ $arrFooterMenus = [
     </div>
 
 </footer>
-
 <?php wp_footer(); ?>
+
+<?php get_search_form(); ?>
+
+
 </body>
 </html>

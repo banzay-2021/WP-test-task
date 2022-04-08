@@ -253,11 +253,13 @@ ul.dropdown-menu[data-bs-popper] {
     color: #fff;
     font-size: 28px;
     padding: 0 1.5rem 0 0;
+    cursor: pointer;
 }
 .top-person {
     color: #fff;
     font-size: 28px;
     padding: 0;
+    cursor: pointer;
 }
 .top-cart {
     color: #fff;
@@ -265,6 +267,7 @@ ul.dropdown-menu[data-bs-popper] {
     padding: 0 0 0 1.5rem;
     position: relative;
     margin-right: 1rem;
+    cursor: pointer;
 }
 .top-cart .count-items {
     background: #F14C26;
@@ -597,14 +600,18 @@ ul.dropdown-menu[data-bs-popper] {
 .add-to-cart-box .screen-reader-text {
     display: none;
 }
+.add-to-cart-box .quantity {
+    width: 4.2rem;
+    display: inline-block;
+}
 .add-to-cart-box input {
-    width: 4rem;
-    text-align: center;
+    width: 4rem !important;
+    text-align: center !important;
     height: 2rem;
     border: 1px solid #ececec;
     border-radius: 4px;
 }
 .add-to-cart-box button.button {
-    width: 89% !important;
+    width: calc(100% - 4.465rem) !important;
     background: #f24d26 !important;
 }
