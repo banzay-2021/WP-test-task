@@ -3,19 +3,19 @@
 $arrFooterMenus = [
 	[
 		'theme_location' => 'footerShop',
-		'hasFooterMenu'  => has_nav_menu( 'footerShop' )
+		'hasFooterMenu'  => has_nav_menu('footerShop')
 	],
 	[
 		'theme_location' => 'footerServices',
-		'hasFooterMenu'  => has_nav_menu( 'footerServices' )
+		'hasFooterMenu'  => has_nav_menu('footerServices')
 	],
 	[
 		'theme_location' => 'footerAboutUs',
-		'hasFooterMenu'  => has_nav_menu( 'footerAboutUs' )
+		'hasFooterMenu'  => has_nav_menu('footerAboutUs')
 	],
 	[
 		'theme_location' => 'footerContactUs',
-		'hasFooterMenu'  => has_nav_menu( 'footerContactUs' )
+		'hasFooterMenu'  => has_nav_menu('footerContactUs')
 	],
 ];
 ?>
@@ -29,10 +29,10 @@ $arrFooterMenus = [
                 </a>
             </div>
 			<?php
-			foreach ( $arrFooterMenus as $item ) {
-				if ( $item['hasFooterMenu'] ) { ?>
+			foreach ($arrFooterMenus as $item) {
+				if ($item['hasFooterMenu']) { ?>
                     <div class="col-6 col-md ps-md-4 mb-4">
-                        <h5><?= wp_get_nav_menu_name( $item['theme_location'] ) ?></h5>
+                        <h5><?= wp_get_nav_menu_name($item['theme_location']) ?></h5>
                         <ul class="nav flex-column opacity-60">
 							<?php
 							wp_nav_menu(

@@ -1,6 +1,6 @@
 <?php
 $isHome        = is_home() ? 'home-page' : 'not-home-page';
-$hasFooterShop = has_nav_menu( 'footerShop' );
+$hasFooterShop = has_nav_menu('footerShop');
 ?>
     <div id="top-menu" class="position-fixed py-2 w-100 zi-200 <?= $isHome; ?>">
         <div class="container px-md-4">
@@ -11,7 +11,7 @@ $hasFooterShop = has_nav_menu( 'footerShop' );
                             <img class="logo" width="98" height="48"
                                  src="<?= get_template_directory_uri(); ?>/assets/images/Ritz_Logo_<?= is_home() ? 'Light' : 'Dark'; ?>.svg">
                         </a>
-						<?php if ( $hasFooterShop ) { ?>
+						<?php if ($hasFooterShop) { ?>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                     aria-expanded="false" aria-label="Toggle navigation">
@@ -58,7 +58,7 @@ $hasFooterShop = has_nav_menu( 'footerShop' );
 $linkFacebook  = '#';
 $linkInstagram = '#';
 
-if ( is_home() ) {
+if (is_home()) {
 	?>
     <div class="wp-custom-header position-relative">
         <div class="position-absolute header-text-body">
