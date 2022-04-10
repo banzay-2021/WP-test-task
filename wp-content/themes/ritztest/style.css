@@ -711,3 +711,7 @@ ul.dropdown-menu[data-bs-popper] {
     width: calc(100% - 4.465rem) !important;
     background: #f24d26 !important;
 }
+
+.post-img img {
+    width: 100%;
+}
